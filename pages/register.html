@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | SkillBridge</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/auth.css">
+
+</head>
+
+<body>
+
+    <div class="auth-page">
+
+
+        <!-- LEFT SIDE -->
+
+        <div class="auth-brand">
+
+            <a href="../index.html"
+               class="logo auth-logo">
+
+                <span class="logo-icon">S</span>
+                <span>SkillBridge</span>
+
+            </a>
+
+
+            <div class="brand-content">
+
+                <span class="section-label">
+                    JOIN THE ECOSYSTEM
+                </span>
+
+                <h1>
+                    Build your
+                    <span>future</span>
+                    together.
+                </h1>
+
+                <p>
+                    Join students, academic institutions
+                    and industry professionals on one
+                    connected platform.
+                </p>
+
+            </div>
+
+
+            <div class="brand-footer">
+
+                <span>SIH26044</span>
+
+                <span>•</span>
+
+                <span>SkillBridge Platform</span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="auth-container">
+
+            <div class="auth-card register-card">
+
+
+                <div class="auth-header">
+
+                    <h2>Create your account</h2>
+
+                    <p>
+                        Choose your role to get started
+                    </p>
+
+                </div>
+
+
+
+                <form id="registerForm">
+
+
+                    <!-- ROLE SELECTION -->
+
+                    <div class="form-group">
+
+                        <label>
+                            I am registering as
+                        </label>
+
+
+                        <div class="role-selector">
+
+
+                            <label class="role-option">
+
+                                <input
+                                    type="radio"
+                                    name="role"
+                                    value="student"
+                                    required
+                                >
+
+                                <span class="role-box">
+
+                                    <span class="role-icon">
+                                        🎓
+                                    </span>
+
+                                    <strong>
+                                        Student
+                                    </strong>
+
+                                    <small>
+                                        Build your career
+                                    </small>
+
+                                </span>
+
+                            </label>
+
+
+
+                            <label class="role-option">
+
+                                <input
+                                    type="radio"
+                                    name="role"
+                                    value="academia"
+                                >
+
+                                <span class="role-box">
+
+                                    <span class="role-icon">
+                                        🏫
+                                    </span>
+
+                                    <strong>
+                                        Academia
+                                    </strong>
+
+                                    <small>
+                                        Manage students
+                                    </small>
+
+                                </span>
+
+                            </label>
+
+
+
+                            <label class="role-option">
+
+                                <input
+                                    type="radio"
+                                    name="role"
+                                    value="industry"
+                                >
+
+                                <span class="role-box">
+
+                                    <span class="role-icon">
+                                        🏢
+                                    </span>
+
+                                    <strong>
+                                        Industry
+                                    </strong>
+
+                                    <small>
+                                        Find talent
+                                    </small>
+
+                                </span>
+
+                            </label>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- COMMON DETAILS -->
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="firstName">
+                                First Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="firstName"
+                                placeholder="First name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="lastName">
+                                Last Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="lastName"
+                                placeholder="Last name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="registerEmail">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="registerEmail"
+                            placeholder="you@example.com"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="registerPassword">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            placeholder="Create a password"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- STUDENT DETAILS -->
+
+                    <div
+                        id="studentFields"
+                        class="role-fields hidden">
+
+                        <div class="form-group">
+
+                            <label for="college">
+                                College / Institution
+                            </label>
+
+                            <input
+                                type="text"
+                                id="college"
+                                placeholder="Enter your institution"
+                            >
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="course">
+                                    Course
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="course"
+                                    placeholder="e.g. B.Tech"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="graduationYear">
+                                    Graduation Year
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="graduationYear"
+                                    placeholder="2028"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ACADEMIA DETAILS -->
+
+                    <div
+                        id="academiaFields"
+                        class="role-fields hidden">
+
+                        <div class="form-group">
+
+                            <label for="institutionName">
+                                Institution Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="institutionName"
+                                placeholder="University / College name"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="department">
+                                Department
+                            </label>
+
+                            <input
+                                type="text"
+                                id="department"
+                                placeholder="e.g. Computer Science"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- INDUSTRY DETAILS -->
+
+                    <div
+                        id="industryFields"
+                        class="role-fields hidden">
+
+                        <div class="form-group">
+
+                            <label for="companyName">
+                                Company Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="companyName"
+                                placeholder="Company name"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="industryType">
+                                Industry
+                            </label>
+
+                            <select id="industryType">
+
+                                <option value="">
+                                    Select industry
+                                </option>
+
+                                <option>
+                                    Information Technology
+                                </option>
+
+                                <option>
+                                    Finance
+                                </option>
+
+                                <option>
+                                    Healthcare
+                                </option>
+
+                                <option>
+                                    Manufacturing
+                                </option>
+
+                                <option>
+                                    Education
+                                </option>
+
+                                <option>
+                                    Retail
+                                </option>
+
+                                <option>
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div id="registerMessage"
+                         class="form-message">
+                    </div>
+
+
+
+                    <label class="terms">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            required
+                        >
+
+                        <span>
+                            I agree to the
+                            <a href="#">
+                                Terms of Service
+                            </a>
+                            and
+                            <a href="#">
+                                Privacy Policy
+                            </a>.
+                        </span>
+
+                    </label>
+
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary auth-submit">
+
+                        Create Account
+
+                    </button>
+
+
+                </form>
+
+
+
+                <div class="register-prompt">
+
+                    <span>
+                        Already have an account?
+                    </span>
+
+                    <a href="login.html">
+                        Sign in
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="../js/auth.js"></script>
+
+</body>
+
+</html>
