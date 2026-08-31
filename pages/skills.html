@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Skills | SkillBridge</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/profile.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+
+            <a href="../index.html"
+               class="logo dashboard-logo">
+
+                <span class="logo-icon">S</span>
+                <span>SkillBridge</span>
+
+            </a>
+
+
+            <div class="user-role-badge">
+                Student
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+                <div class="nav-section-title">
+                    MAIN
+                </div>
+
+                <a href="dashboard.html"
+                   class="sidebar-link">
+
+                    <span>⌂</span>
+                    Dashboard
+
+                </a>
+
+
+                <div class="nav-section-title">
+                    CAREER
+                </div>
+
+                <a href="profile.html"
+                   class="sidebar-link">
+
+                    <span>👤</span>
+                    My Profile
+
+                </a>
+
+
+                <a href="skills.html"
+                   class="sidebar-link active">
+
+                    <span>⚡</span>
+                    My Skills
+
+                </a>
+
+
+                <a href="#"
+                   class="sidebar-link">
+
+                    <span>📊</span>
+                    Skill Gap
+
+                </a>
+
+
+                <a href="#"
+                   class="sidebar-link">
+
+                    <span>💼</span>
+                    Internships
+
+                </a>
+
+
+                <a href="#"
+                   class="sidebar-link">
+
+                    <span>🎯</span>
+                    Placements
+
+                </a>
+
+
+                <a href="#"
+                   class="sidebar-link">
+
+                    <span>📄</span>
+                    Applications
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <button
+                id="logoutButton"
+                class="logout-button">
+
+                <span>↪</span>
+                Logout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- MAIN -->
+
+    <main class="dashboard-main">
+
+
+        <header class="dashboard-header">
+
+            <div class="header-spacer"></div>
+
+            <button class="notification-button">
+                🔔
+            </button>
+
+
+            <div class="profile-menu">
+
+                <div
+                    class="profile-avatar"
+                    id="profileAvatar">
+                    U
+                </div>
+
+                <div class="profile-info">
+
+                    <strong id="headerName">
+                        User
+                    </strong>
+
+                    <span>
+                        Student
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <div class="dashboard-content">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="page-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        SKILL PROFILE
+                    </span>
+
+                    <h1>
+                        My Skills
+                    </h1>
+
+                    <p>
+                        Add your technical and professional
+                        skills with your current proficiency.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SKILL SUMMARY -->
+
+            <div class="skill-summary">
+
+                <div class="summary-card">
+
+                    <span>
+                        Total Skills
+                    </span>
+
+                    <strong id="totalSkills">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <span>
+                        Advanced
+                    </span>
+
+                    <strong id="advancedSkills">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <span>
+                        Intermediate
+                    </span>
+
+                    <strong id="intermediateSkills">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <span>
+                        Beginner
+                    </span>
+
+                    <strong id="beginnerSkills">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ADD SKILL -->
+
+            <section class="profile-card">
+
+                <div class="card-title">
+
+                    <div>
+
+                        <h2>
+                            Add a Skill
+                        </h2>
+
+                        <p>
+                            Tell us what you know.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form id="skillForm"
+                      class="skill-form">
+
+
+                    <div class="profile-form-group">
+
+                        <label>
+                            Skill
+                        </label>
+
+                        <input
+                            type="text"
+                            id="skillName"
+                            placeholder="e.g. Python"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="profile-form-group">
+
+                        <label>
+                            Category
+                        </label>
+
+                        <select id="skillCategory">
+
+                            <option value="Programming">
+                                Programming
+                            </option>
+
+                            <option value="Web Development">
+                                Web Development
+                            </option>
+
+                            <option value="Data & AI">
+                                Data & AI
+                            </option>
+
+                            <option value="Design">
+                                Design
+                            </option>
+
+                            <option value="Management">
+                                Management
+                            </option>
+
+                            <option value="Communication">
+                                Communication
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="profile-form-group">
+
+                        <label>
+                            Proficiency
+                        </label>
+
+                        <select id="skillLevel">
+
+                            <option value="Beginner">
+                                Beginner
+                            </option>
+
+                            <option value="Intermediate">
+                                Intermediate
+                            </option>
+
+                            <option value="Advanced">
+                                Advanced
+                            </option>
+
+                            <option value="Expert">
+                                Expert
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary">
+
+                        + Add Skill
+
+                    </button>
+
+                </form>
+
+
+                <div
+                    id="skillMessage"
+                    class="form-message">
+                </div>
+
+            </section>
+
+
+
+            <!-- SKILL LIST -->
+
+            <section class="profile-card">
+
+                <div class="card-title">
+
+                    <div>
+
+                        <h2>
+                            Your Skills
+                        </h2>
+
+                        <p>
+                            Skills that will be used for
+                            future skill-gap analysis.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="skillsList"
+                    class="skills-list">
+
+                </div>
+
+
+                <div
+                    id="emptySkills"
+                    class="empty-skills">
+
+                    <div>
+                        ⚡
+                    </div>
+
+                    <h3>
+                        No skills added yet
+                    </h3>
+
+                    <p>
+                        Add your first skill above to
+                        start building your skill profile.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="../js/skills.js"></script>
+
+</body>
+
+</html>
