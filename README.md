@@ -49,28 +49,32 @@ and calculation is backed by an actual API call and a database read/write.
 ## 3. Project structure
 
 ```
-sih-platform/
-├── backend/
-│   ├── prisma/
-│   │   ├── schema.prisma      # Data model
-│   │   └── seed.ts            # Demo data
-│   ├── src/
-│   │   ├── controllers/       # Request handlers
-│   │   ├── routes/            # Express routers
-│   │   ├── services/          # skillGapService.ts — the core algorithm
-│   │   ├── middleware/        # auth, error handling
-│   │   ├── utils/             # prisma client, jwt, proficiency mapping
-│   │   └── index.ts           # App entry point
-│   └── .env.example
-└── frontend/
+sih-platform/                  # repo root — this IS the frontend
+├── index.html
+├── package.json
+├── vite.config.ts
+├── tsconfig.json
+├── tailwind.config.js
+├── src/
+│   ├── components/         # Sidebar, Card, Modal, Button, badges, skeletons...
+│   ├── layouts/            # DashboardLayout (persistent nav)
+│   ├── pages/              # Landing, Login, Register, student pages
+│   │   └── admin/          # Admin pages
+│   ├── context/            # AuthContext, ToastContext
+│   ├── services/           # api.ts (axios) + services.ts (typed API calls)
+│   └── types/              # Shared TypeScript types
+├── .env.example
+└── backend/
+    ├── prisma/
+    │   ├── schema.prisma   # Data model
+    │   └── seed.ts         # Demo data
     ├── src/
-    │   ├── components/        # Sidebar, Card, Modal, Button, badges, skeletons...
-    │   ├── layouts/            # DashboardLayout (persistent nav)
-    │   ├── pages/              # Landing, Login, Register, student pages
-    │   │   └── admin/          # Admin pages
-    │   ├── context/            # AuthContext, ToastContext
-    │   ├── services/           # api.ts (axios) + services.ts (typed API calls)
-    │   └── types/               # Shared TypeScript types
+    │   ├── controllers/    # Request handlers
+    │   ├── routes/         # Express routers
+    │   ├── services/       # skillGapService.ts — the core algorithm
+    │   ├── middleware/     # auth, error handling
+    │   ├── utils/           # prisma client, jwt, proficiency mapping
+    │   └── index.ts         # App entry point
     └── .env.example
 ```
 
@@ -105,8 +109,11 @@ The API runs at `http://localhost:4000`. Health check: `GET /api/health`.
 
 ### Frontend setup
 
+The frontend lives at the **repo root** (not in a subfolder), so it pushes
+cleanly to GitHub with `index.html` at the top level.
+
 ```bash
-cd frontend
+# from the repo root
 npm install
 cp .env.example .env       # already done for you; points at localhost:4000/api
 npm run dev
@@ -124,7 +131,7 @@ PORT=4000
 CORS_ORIGIN="http://localhost:5173"
 ```
 
-**frontend/.env**
+**frontend/.env** (repo root `.env`)
 ```
 VITE_API_URL=http://localhost:4000/api
 ```
