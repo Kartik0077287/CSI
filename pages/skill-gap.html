@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Skill Gap Analysis | SkillBridge</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/skill-gap.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+
+    <!-- =========================================
+         SIDEBAR
+    ========================================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+
+            <a href="../index.html"
+               class="logo dashboard-logo">
+
+                <span class="logo-icon">S</span>
+
+                <span>SkillBridge</span>
+
+            </a>
+
+
+            <div class="user-role-badge">
+                Student
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+                <div class="nav-section-title">
+                    MAIN
+                </div>
+
+                <a href="dashboard.html"
+                   class="sidebar-link">
+
+                    <span>⌂</span>
+                    Dashboard
+
+                </a>
+
+
+                <div class="nav-section-title">
+                    CAREER
+                </div>
+
+
+                <a href="profile.html"
+                   class="sidebar-link">
+
+                    <span>👤</span>
+                    My Profile
+
+                </a>
+
+
+                <a href="skills.html"
+                   class="sidebar-link">
+
+                    <span>⚡</span>
+                    My Skills
+
+                </a>
+
+
+                <a href="skill-gap.html"
+                   class="sidebar-link active">
+
+                    <span>📊</span>
+                    Skill Gap
+
+                </a>
+
+
+                <a href="#"
+                   class="sidebar-link">
+
+                    <span>💼</span>
+                    Internships
+
+                </a>
+
+
+                <a href="#"
+                   class="sidebar-link">
+
+                    <span>🎯</span>
+                    Placements
+
+                </a>
+
+
+                <a href="#"
+                   class="sidebar-link">
+
+                    <span>📄</span>
+                    Applications
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <button
+                id="logoutButton"
+                class="logout-button">
+
+                <span>↪</span>
+
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main class="dashboard-main">
+
+
+        <!-- HEADER -->
+
+        <header class="dashboard-header">
+
+            <div class="header-spacer"></div>
+
+
+            <button class="notification-button">
+                🔔
+            </button>
+
+
+            <div class="profile-menu">
+
+                <div
+                    class="profile-avatar"
+                    id="profileAvatar">
+
+                    U
+
+                </div>
+
+
+                <div class="profile-info">
+
+                    <strong id="headerName">
+                        User
+                    </strong>
+
+                    <span>
+                        Student
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================
+             CONTENT
+        ====================================== -->
+
+        <div class="dashboard-content">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="page-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        SKILL INTELLIGENCE
+                    </span>
+
+                    <h1>
+                        Skill Gap Analysis
+                    </h1>
+
+                    <p>
+                        Discover how your current skills
+                        compare with industry requirements.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 ROLE SELECTOR
+            ================================== -->
+
+            <section class="profile-card">
+
+                <div class="card-title">
+
+                    <h2>
+                        Select a Target Role
+                    </h2>
+
+                    <p>
+                        Choose a career role to analyze
+                        your current skill readiness.
+                    </p>
+
+                </div>
+
+
+                <div class="target-role-grid">
+
+
+                    <button
+                        class="target-role"
+                        data-role="software-developer">
+
+                        <span class="target-role-icon">
+                            💻
+                        </span>
+
+                        <span>
+
+                            <strong>
+                                Software Developer
+                            </strong>
+
+                            <small>
+                                Software Engineering
+                            </small>
+
+                        </span>
+
+                    </button>
+
+
+
+                    <button
+                        class="target-role"
+                        data-role="data-analyst">
+
+                        <span class="target-role-icon">
+                            📊
+                        </span>
+
+                        <span>
+
+                            <strong>
+                                Data Analyst
+                            </strong>
+
+                            <small>
+                                Data & Analytics
+                            </small>
+
+                        </span>
+
+                    </button>
+
+
+
+                    <button
+                        class="target-role"
+                        data-role="ml-engineer">
+
+                        <span class="target-role-icon">
+                            🤖
+                        </span>
+
+                        <span>
+
+                            <strong>
+                                ML Engineer
+                            </strong>
+
+                            <small>
+                                Artificial Intelligence
+                            </small>
+
+                        </span>
+
+                    </button>
+
+
+
+                    <button
+                        class="target-role"
+                        data-role="web-developer">
+
+                        <span class="target-role-icon">
+                            🌐
+                        </span>
+
+                        <span>
+
+                            <strong>
+                                Web Developer
+                            </strong>
+
+                            <small>
+                                Web Development
+                            </small>
+
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 ANALYSIS RESULT
+            ================================== -->
+
+            <section
+                id="analysisSection"
+                class="analysis-section">
+
+
+                <!-- MATCH SCORE -->
+
+                <div class="match-card">
+
+
+                    <div class="match-score">
+
+                        <div
+                            class="score-circle"
+                            id="scoreCircle">
+
+                            <strong id="matchScore">
+                                0%
+                            </strong>
+
+                            <span>
+                                Match
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="match-info">
+
+                        <span class="section-label">
+                            READINESS
+                        </span>
+
+                        <h2 id="roleTitle">
+                            Select a role
+                        </h2>
+
+                        <p id="matchDescription">
+                            Select a target role above
+                            to analyze your skills.
+                        </p>
+
+
+                        <div class="match-stats">
+
+                            <div>
+
+                                <strong
+                                    id="matchedCount">
+                                    0
+                                </strong>
+
+                                <span>
+                                    Skills Matched
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong
+                                    id="gapCount">
+                                    0
+                                </strong>
+
+                                <span>
+                                    Skill Gaps
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SKILL COMPARISON -->
+
+                <div class="skill-comparison-grid">
+
+
+                    <!-- MATCHED -->
+
+                    <div class="profile-card">
+
+                        <div class="card-title">
+
+                            <h2>
+                                Skills You Have
+                            </h2>
+
+                            <p>
+                                Skills that match the
+                                selected role.
+                            </p>
+
+                        </div>
+
+
+                        <div
+                            id="matchedSkills"
+                            class="analysis-skill-list">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- GAP -->
+
+                    <div class="profile-card">
+
+                        <div class="card-title">
+
+                            <h2>
+                                Skills to Improve
+                            </h2>
+
+                            <p>
+                                Skills required by industry
+                                that are missing or below
+                                the required level.
+                            </p>
+
+                        </div>
+
+
+                        <div
+                            id="gapSkills"
+                            class="analysis-skill-list">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RECOMMENDATIONS -->
+
+                <div class="profile-card">
+
+                    <div class="card-title">
+
+                        <h2>
+                            Recommended Focus Areas
+                        </h2>
+
+                        <p>
+                            Prioritize these skills to
+                            improve your career readiness.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        id="recommendations"
+                        class="recommendation-list">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="../js/skill-gap.js"></script>
+
+</body>
+
+</html>

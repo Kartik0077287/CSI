@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Industry Dashboard | SkillBridge</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/industry.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+
+    <!-- =========================================
+         SIDEBAR
+    ========================================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+
+            <a href="../index.html"
+               class="logo dashboard-logo">
+
+                <span class="logo-icon">S</span>
+
+                <span>SkillBridge</span>
+
+            </a>
+
+
+            <div class="user-role-badge">
+                Industry
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+                <div class="nav-section-title">
+                    MAIN
+                </div>
+
+
+                <a href="industry-dashboard.html"
+                   class="sidebar-link active">
+
+                    <span>⌂</span>
+
+                    Dashboard
+
+                </a>
+
+
+                <div class="nav-section-title">
+                    TALENT
+                </div>
+
+
+                <a href="opportunities.html"
+                   class="sidebar-link">
+
+                    <span>💼</span>
+
+                    Opportunities
+
+                </a>
+
+
+                <a href="#"
+                   class="sidebar-link">
+
+                    <span>👥</span>
+
+                    Candidates
+
+                </a>
+
+
+                <a href="#"
+                   class="sidebar-link">
+
+                    <span>📊</span>
+
+                    Skill Analytics
+
+                </a>
+
+
+                <div class="nav-section-title">
+                    MANAGEMENT
+                </div>
+
+
+                <a href="#"
+                   class="sidebar-link">
+
+                    <span>🏫</span>
+
+                    Academia
+
+                </a>
+
+
+                <a href="#"
+                   class="sidebar-link">
+
+                    <span>⚙</span>
+
+                    Settings
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <button
+                id="logoutButton"
+                class="logout-button">
+
+                <span>↪</span>
+
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main class="dashboard-main">
+
+
+        <!-- HEADER -->
+
+        <header class="dashboard-header">
+
+            <div class="header-spacer"></div>
+
+
+            <button class="notification-button">
+                🔔
+            </button>
+
+
+            <div class="profile-menu">
+
+                <div
+                    class="profile-avatar"
+                    id="profileAvatar">
+
+                    I
+
+                </div>
+
+
+                <div class="profile-info">
+
+                    <strong id="headerName">
+                        Industry
+                    </strong>
+
+                    <span>
+                        Industry
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================
+             CONTENT
+        ====================================== -->
+
+        <div class="dashboard-content">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="industry-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        INDUSTRY PORTAL
+                    </span>
+
+                    <h1>
+                        Industry Dashboard
+                    </h1>
+
+                    <p>
+                        Connect with skilled students and
+                        define the talent your organization needs.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="create-opportunity.html"
+                    class="btn btn-primary">
+
+                    + Create Opportunity
+
+                </a>
+
+            </div>
+
+
+
+            <!-- =================================
+                 STAT CARDS
+            ================================== -->
+
+            <div class="industry-stat-grid">
+
+
+                <div class="industry-stat-card">
+
+                    <div class="industry-stat-icon">
+                        💼
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Active Opportunities
+                        </span>
+
+                        <strong id="activeOpportunities">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="industry-stat-card">
+
+                    <div class="industry-stat-icon">
+                        👥
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Applicants
+                        </span>
+
+                        <strong id="totalApplicants">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="industry-stat-card">
+
+                    <div class="industry-stat-icon">
+                        ⚡
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Skills Defined
+                        </span>
+
+                        <strong id="skillsDefined">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="industry-stat-card">
+
+                    <div class="industry-stat-icon">
+                        🎯
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Shortlisted
+                        </span>
+
+                        <strong id="shortlistedCandidates">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 QUICK ACTIONS
+            ================================== -->
+
+            <section class="industry-card">
+
+                <div class="industry-card-title">
+
+                    <div>
+
+                        <h2>
+                            Quick Actions
+                        </h2>
+
+                        <p>
+                            Manage your talent requirements.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-action-grid">
+
+
+                    <a
+                        href="create-opportunity.html"
+                        class="quick-action">
+
+                        <div class="quick-action-icon">
+                            +
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Create Opportunity
+                            </strong>
+
+                            <span>
+                                Post a job or internship
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <a
+                        href="opportunities.html"
+                        class="quick-action">
+
+                        <div class="quick-action-icon">
+                            💼
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Manage Opportunities
+                            </strong>
+
+                            <span>
+                                View and edit your openings
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <a
+                        href="#"
+                        class="quick-action">
+
+                        <div class="quick-action-icon">
+                            👥
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Find Candidates
+                            </strong>
+
+                            <span>
+                                Discover matching students
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <a
+                        href="#"
+                        class="quick-action">
+
+                        <div class="quick-action-icon">
+                            📊
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Skill Analytics
+                            </strong>
+
+                            <span>
+                                Explore talent skill trends
+                            </span>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 RECENT OPPORTUNITIES
+            ================================== -->
+
+            <section class="industry-card">
+
+                <div class="industry-card-title">
+
+                    <div>
+
+                        <h2>
+                            Recent Opportunities
+                        </h2>
+
+                        <p>
+                            Your latest job and internship
+                            requirements.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="opportunities.html"
+                        class="view-all">
+
+                        View All →
+
+                    </a>
+
+                </div>
+
+
+                <div
+                    id="recentOpportunities"
+                    class="recent-opportunities">
+
+                </div>
+
+
+                <div
+                    id="emptyOpportunities"
+                    class="industry-empty">
+
+                    <div>
+                        💼
+                    </div>
+
+                    <h3>
+                        No opportunities yet
+                    </h3>
+
+                    <p>
+                        Create your first opportunity to
+                        start connecting with students.
+                    </p>
+
+                    <a
+                        href="create-opportunity.html"
+                        class="btn btn-primary">
+
+                        Create Opportunity
+
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="../js/industry-dashboard.js"></script>
+
+</body>
+
+</html>

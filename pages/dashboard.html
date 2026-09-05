@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | SkillBridge</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+
+    <!-- =========================================
+         SIDEBAR
+    ========================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-top">
+
+            <!-- LOGO -->
+
+            <a href="../index.html" class="logo dashboard-logo">
+
+                <span class="logo-icon">S</span>
+
+                <span>SkillBridge</span>
+
+            </a>
+
+
+            <!-- ROLE -->
+
+            <div class="user-role-badge">
+
+                <span id="sidebarRole">
+                    Loading...
+                </span>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="sidebar-nav">
+
+                <div class="nav-section-title">
+                    MAIN
+                </div>
+
+                <a href="#" class="sidebar-link active">
+
+                    <span class="sidebar-icon">⌂</span>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <div
+                    id="studentNavigation"
+                    class="role-navigation">
+
+                    <div class="nav-section-title">
+                        CAREER
+                    </div>
+
+                    <a href="profile.html">
+                        <span>👤</span>
+                        My Profile
+                    </a>
+
+                    <a href="skills.html">
+                        <span>⚡</span>
+                        My Skills
+                    </a>
+
+                    <a href="skill-gap.html">
+                        <span>📊</span>
+                        Skill Gap
+                    </a>
+
+                    <a href="#">
+                        <span>💼</span>
+                        Internships
+                    </a>
+
+                    <a href="#">
+                        <span>🎯</span>
+                        Placements
+                    </a>
+
+                    <a href="#">
+                        <span>📄</span>
+                        Applications
+                    </a>
+
+                </div>
+
+
+                <div
+                    id="academiaNavigation"
+                    class="role-navigation">
+
+                    <div class="nav-section-title">
+                        ACADEMIA
+                    </div>
+
+                    <a href="#">
+                        <span>👨‍🎓</span>
+                        Students
+                    </a>
+
+                    <a href="#">
+                        <span>⚡</span>
+                        Skill Mapping
+                    </a>
+
+                    <a href="#">
+                        <span>🏢</span>
+                        Industry Requirements
+                    </a>
+
+                    <a href="#">
+                        <span>💼</span>
+                        Internships
+                    </a>
+
+                    <a href="#">
+                        <span>🎯</span>
+                        Placements
+                    </a>
+
+                    <a href="#">
+                        <span>🤝</span>
+                        Collaboration
+                    </a>
+
+                    <a href="#">
+                        <span>📊</span>
+                        Analytics
+                    </a>
+
+                </div>
+
+
+                <div
+                    id="industryNavigation"
+                    class="role-navigation">
+
+                    <div class="nav-section-title">
+                        INDUSTRY
+                    </div>
+
+                    <a href="#">
+                        <span>🏢</span>
+                        Company Profile
+                    </a>
+
+                    <a href="#">
+                        <span>⚡</span>
+                        Skill Requirements
+                    </a>
+
+                    <a href="#">
+                        <span>💼</span>
+                        Internships
+                    </a>
+
+                    <a href="#">
+                        <span>🎯</span>
+                        Job Opportunities
+                    </a>
+
+                    <a href="#">
+                        <span>👥</span>
+                        Applications
+                    </a>
+
+                    <a href="#">
+                        <span>🤝</span>
+                        College Collaboration
+                    </a>
+
+                    <a href="#">
+                        <span>🔎</span>
+                        Talent Search
+                    </a>
+
+                </div>
+
+
+                <div
+                    id="adminNavigation"
+                    class="role-navigation">
+
+                    <div class="nav-section-title">
+                        ADMINISTRATION
+                    </div>
+
+                    <a href="#">
+                        <span>👥</span>
+                        Users
+                    </a>
+
+                    <a href="#">
+                        <span>🏫</span>
+                        Institutions
+                    </a>
+
+                    <a href="#">
+                        <span>🏢</span>
+                        Companies
+                    </a>
+
+                    <a href="#">
+                        <span>⚡</span>
+                        Skills
+                    </a>
+
+                    <a href="#">
+                        <span>💼</span>
+                        Opportunities
+                    </a>
+
+                    <a href="#">
+                        <span>📊</span>
+                        Reports
+                    </a>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="sidebar-link">
+
+                <span class="sidebar-icon">⚙</span>
+
+                <span>Settings</span>
+
+            </a>
+
+
+            <button
+                id="logoutButton"
+                class="logout-button">
+
+                <span>↪</span>
+
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main class="dashboard-main">
+
+
+        <!-- TOP BAR -->
+
+        <header class="dashboard-header">
+
+            <button
+                id="menuButton"
+                class="mobile-menu-button">
+
+                ☰
+
+            </button>
+
+
+            <div class="header-spacer"></div>
+
+
+            <button class="notification-button">
+
+                🔔
+
+                <span class="notification-dot"></span>
+
+            </button>
+
+
+            <div class="profile-menu">
+
+                <div class="profile-avatar"
+                     id="profileAvatar">
+
+                    U
+
+                </div>
+
+                <div class="profile-info">
+
+                    <strong id="headerName">
+                        User
+                    </strong>
+
+                    <span id="headerRole">
+                        User
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================================
+             DASHBOARD CONTENT
+        ========================================== -->
+
+        <div class="dashboard-content">
+
+
+            <!-- WELCOME -->
+
+            <section class="welcome-section">
+
+                <div>
+
+                    <span class="section-label">
+                        DASHBOARD
+                    </span>
+
+                    <h1>
+                        Welcome back,
+                        <span id="welcomeName">
+                            User
+                        </span>
+                    </h1>
+
+                    <p id="welcomeDescription">
+                        Here's what's happening on
+                        SkillBridge today.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================
+                 STUDENT DASHBOARD
+            ====================================== -->
+
+            <section
+                id="studentDashboard"
+                class="role-dashboard">
+
+
+                <div class="dashboard-stats">
+
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-card-icon">
+                            ⚡
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Skills Added
+                            </span>
+
+                            <strong>
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-card-icon">
+                            📊
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Skill Match
+                            </span>
+
+                            <strong>
+                                0%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-card-icon">
+                            💼
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Internships
+                            </span>
+
+                            <strong>
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-card-icon">
+                            🎯
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Applications
+                            </span>
+
+                            <strong>
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="dashboard-grid">
+
+
+                    <div class="dashboard-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h3>
+                                    Complete Your Profile
+                                </h3>
+
+                                <p>
+                                    Improve your visibility
+                                    to recruiters.
+                                </p>
+
+                            </div>
+
+                            <strong>
+                                20%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress-fill"
+                                style="width:20%">
+                            </div>
+
+                        </div>
+
+
+                        <button class="panel-action">
+                            Complete Profile →
+                        </button>
+
+                    </div>
+
+
+
+                    <div class="dashboard-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h3>
+                                    Recommended Opportunities
+                                </h3>
+
+                                <p>
+                                    Based on your profile.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="empty-state">
+
+                            <div>
+                                💼
+                            </div>
+
+                            <p>
+                                Add your skills to receive
+                                recommendations.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================
+                 ACADEMIA DASHBOARD
+            ====================================== -->
+
+            <section
+                id="academiaDashboard"
+                class="role-dashboard">
+
+
+                <div class="dashboard-stats">
+
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-card-icon">
+                            👨‍🎓
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Total Students
+                            </span>
+
+                            <strong>
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-card-icon">
+                            ⚡
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Skills Mapped
+                            </span>
+
+                            <strong>
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-card-icon">
+                            💼
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Opportunities
+                            </span>
+
+                            <strong>
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-card-icon">
+                            🤝
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Collaborations
+                            </span>
+
+                            <strong>
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="dashboard-grid">
+
+
+                    <div class="dashboard-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h3>
+                                    Student Skill Overview
+                                </h3>
+
+                                <p>
+                                    Monitor skill development
+                                    across your institution.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="empty-state">
+
+                            <div>
+                                📊
+                            </div>
+
+                            <p>
+                                Student skill data will
+                                appear here.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="dashboard-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h3>
+                                    Industry Demand
+                                </h3>
+
+                                <p>
+                                    Current industry requirements.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="empty-state">
+
+                            <div>
+                                🏢
+                            </div>
+
+                            <p>
+                                Industry requirement data
+                                will appear here.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================
+                 INDUSTRY DASHBOARD
+            ====================================== -->
+
+            <section
+                id="industryDashboard"
+                class="role-dashboard">
+
+
+                <div class="dashboard-stats">
+
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-card-icon">
+                            👥
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Talent Matches
+                            </span>
+
+                            <strong>
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-card-icon">
+                            💼
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Active Opportunities
+                            </span>
+
+                            <strong>
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-card-icon">
+                            📄
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Applications
+                            </span>
+
+                            <strong>
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-card-icon">
+                            🤝
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Collaborations
+                            </span>
+
+                            <strong>
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="dashboard-grid">
+
+
+                    <div class="dashboard-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h3>
+                                    Talent Recommendations
+                                </h3>
+
+                                <p>
+                                    Candidates matching your
+                                    skill requirements.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="empty-state">
+
+                            <div>
+                                🔎
+                            </div>
+
+                            <p>
+                                Define your skill requirements
+                                to find matching talent.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="dashboard-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h3>
+                                    Your Opportunities
+                                </h3>
+
+                                <p>
+                                    Manage internships and jobs.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="empty-state">
+
+                            <div>
+                                💼
+                            </div>
+
+                            <p>
+                                You haven't posted any
+                                opportunities yet.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================
+                 ADMIN DASHBOARD
+            ====================================== -->
+
+            <section
+                id="adminDashboard"
+                class="role-dashboard">
+
+
+                <div class="dashboard-stats">
+
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-card-icon">
+                            👥
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Users
+                            </span>
+
+                            <strong>
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-card-icon">
+                            🏫
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Institutions
+                            </span>
+
+                            <strong>
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-card-icon">
+                            🏢
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Companies
+                            </span>
+
+                            <strong>
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="stat-card-icon">
+                            💼
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Opportunities
+                            </span>
+
+                            <strong>
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="dashboard-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h3>
+                                Platform Overview
+                            </h3>
+
+                            <p>
+                                Monitor the SkillBridge ecosystem.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="empty-state">
+
+                        <div>
+                            📊
+                        </div>
+
+                        <p>
+                            Platform analytics will
+                            appear here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

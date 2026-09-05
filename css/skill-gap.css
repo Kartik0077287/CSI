@@ -1,0 +1,428 @@
+/* =========================================
+   TARGET ROLE
+========================================= */
+
+.target-role-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+
+.target-role {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 9px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    transition: 0.2s;
+}
+
+
+.target-role:hover {
+    border-color: #a5b4fc;
+
+    background: #fafbff;
+}
+
+
+.target-role.active {
+    border-color: var(--primary);
+
+    background: #eef2ff;
+
+    box-shadow:
+        0 0 0 2px rgba(79,70,229,0.08);
+}
+
+
+.target-role-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f1f5f9;
+
+    border-radius: 8px;
+
+    font-size: 19px;
+}
+
+
+.target-role.active
+.target-role-icon {
+    background: white;
+}
+
+
+.target-role strong {
+    display: block;
+
+    color: var(--text);
+
+    font-size: 12px;
+
+    margin-bottom: 4px;
+}
+
+
+.target-role small {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   ANALYSIS
+========================================= */
+
+.analysis-section {
+    margin-top: 20px;
+
+    display: none;
+}
+
+
+.analysis-section.visible {
+    display: block;
+}
+
+
+/* =========================================
+   MATCH CARD
+========================================= */
+
+.match-card {
+    display: grid;
+
+    grid-template-columns: 200px 1fr;
+
+    gap: 30px;
+
+    align-items: center;
+
+    padding: 30px;
+
+    margin-bottom: 20px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+}
+
+
+.match-score {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================================
+   SCORE CIRCLE
+========================================= */
+
+.score-circle {
+    width: 145px;
+    height: 145px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 10px solid #e2e8f0;
+
+    background: white;
+}
+
+
+.score-circle strong {
+    font-size: 30px;
+
+    color: var(--primary);
+}
+
+
+.score-circle span {
+    color: var(--muted);
+
+    font-size: 11px;
+
+    margin-top: 2px;
+}
+
+
+/* =========================================
+   MATCH INFO
+========================================= */
+
+.match-info h2 {
+    margin-top: 7px;
+
+    margin-bottom: 7px;
+
+    font-size: 23px;
+}
+
+
+.match-info > p {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    max-width: 650px;
+}
+
+
+.match-stats {
+    display: flex;
+
+    gap: 40px;
+
+    margin-top: 22px;
+}
+
+
+.match-stats div {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.match-stats strong {
+    font-size: 22px;
+}
+
+
+.match-stats span {
+    color: var(--muted);
+
+    font-size: 10px;
+
+    margin-top: 2px;
+}
+
+
+/* =========================================
+   COMPARISON
+========================================= */
+
+.skill-comparison-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+.analysis-skill-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.analysis-skill {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 13px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+}
+
+
+.analysis-skill-main {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.analysis-skill-icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f1f5f9;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+}
+
+
+.analysis-skill h3 {
+    font-size: 12px;
+
+    margin-bottom: 3px;
+}
+
+
+.analysis-skill span {
+    color: var(--muted);
+
+    font-size: 9px;
+}
+
+
+.skill-status {
+    padding: 5px 8px;
+
+    border-radius: 5px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+
+.skill-status.match {
+    background: #dcfce7;
+
+    color: #15803d;
+}
+
+
+.skill-status.gap {
+    background: #fee2e2;
+
+    color: #dc2626;
+}
+
+
+/* =========================================
+   RECOMMENDATIONS
+========================================= */
+
+.recommendation-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+
+.recommendation-item {
+    padding: 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+}
+
+
+.recommendation-item strong {
+    display: block;
+
+    font-size: 12px;
+
+    margin-bottom: 5px;
+}
+
+
+.recommendation-item p {
+    color: var(--muted);
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .target-role-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .match-card {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .match-stats {
+        justify-content: center;
+    }
+
+    .skill-comparison-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recommendation-list {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .target-role-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
