@@ -1,0 +1,152 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  STUDENT
+  ADMIN
+}
+
+enum Proficiency {
+  BEGINNER
+  INTERMEDIATE
+  ADVANCED
+  EXPERT
+}
+
+enum Importance {
+  LOW
+  MEDIUM
+  HIGH
+}
+
+enum RecType {
+  LEARN
+  PRACTICE
+  PROJECT
+  CERTIFICATION
+}
+
+enum RecStatus {
+  NOT_STARTED
+  IN_PROGRESS
+  COMPLETED
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  password  String
+  role      Role     @default(STUDENT)
+  createdAt DateTime @default(now())
+
+  profile StudentProfile?
+}
+
+model StudentProfile {
+  id             String   @id @default(cuid())
+  userId         String   @unique
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  phone          String?
+  location       String?
+  photoUrl       String?
+  college        String?
+  degree         String?
+  branch         String?
+  graduationYear Int?
+  cgpa           Float?
+  bio            String?
+  preferredIndustry String?
+  experienceLevel   String?
+  targetCareerId String?
+  targetCareer   Career?  @relation(fields: [targetCareerId], references: [id])
+  status         String   @default("ACTIVE")
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  skills          StudentSkill[]
+  recommendations Recommendation[]
+  progress        Progress[]
+}
+
+model Skill {
+  id       String @id @default(cuid())
+  name     String @unique
+  category String
+
+  studentSkills StudentSkill[]
+  careerSkills  CareerSkill[]
+  recommendations Recommendation[]
+  progress      Progress[]
+}
+
+model StudentSkill {
+  id           String      @id @default(cuid())
+  studentId    String
+  student      StudentProfile @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  skillId      String
+  skill        Skill       @relation(fields: [skillId], references: [id], onDelete: Cascade)
+  proficiency  Int         @default(0)
+  level        Proficiency @default(BEGINNER)
+  experience   Float       @default(0)
+  verified     Boolean     @default(false)
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+
+  @@unique([studentId, skillId])
+}
+
+model Career {
+  id          String @id @default(cuid())
+  name        String @unique
+  description String
+  industry    String
+  difficulty  String @default("Medium")
+
+  requiredSkills CareerSkill[]
+  students       StudentProfile[]
+}
+
+model CareerSkill {
+  id                  String     @id @default(cuid())
+  careerId            String
+  career              Career     @relation(fields: [careerId], references: [id], onDelete: Cascade)
+  skillId             String
+  skill               Skill      @relation(fields: [skillId], references: [id], onDelete: Cascade)
+  requiredProficiency Int
+  importance          Importance @default(MEDIUM)
+
+  @@unique([careerId, skillId])
+}
+
+model Recommendation {
+  id        String    @id @default(cuid())
+  studentId String
+  student   StudentProfile @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  skillId   String
+  skill     Skill     @relation(fields: [skillId], references: [id], onDelete: Cascade)
+  type      RecType
+  priority  String
+  status    RecStatus @default(NOT_STARTED)
+  reason    String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Progress {
+  id             String   @id @default(cuid())
+  studentId      String
+  student        StudentProfile @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  skillId        String
+  skill          Skill    @relation(fields: [skillId], references: [id], onDelete: Cascade)
+  oldProficiency Int
+  newProficiency Int
+  note           String?
+  updatedAt      DateTime @default(now())
+}
