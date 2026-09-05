@@ -233,7 +233,34 @@ All routes are prefixed with `/api`. Protected routes require
 
 ---
 
-## 9. Future improvements
+## 10. Deploying the frontend to GitHub Pages
+
+The frontend is already configured for GitHub Pages:
+- `vite.config.ts` uses `base: "./"` so built asset paths are relative and work
+  at any subpath (`username.github.io/repo-name/`).
+- Routing uses `HashRouter` instead of `BrowserRouter`, since GitHub Pages
+  can't be configured with the server-side rewrites `BrowserRouter` needs —
+  URLs look like `#/dashboard` instead of `/dashboard`, but every route works
+  without a custom 404 page.
+
+To deploy:
+
+```bash
+npm run build
+npx gh-pages -d dist   # or push dist/ to a gh-pages branch manually
+```
+
+Then enable GitHub Pages on that branch in your repo's Settings → Pages.
+
+**Important:** GitHub Pages only serves static files — it cannot run the
+Express/Prisma backend. Deploy `backend/` separately (Render, Railway, Fly.io,
+etc.), then set `VITE_API_URL` in your `.env` to that backend's URL before
+running `npm run build`, so the deployed frontend points at a real API instead
+of `localhost:4000`.
+
+---
+
+## 11. Future improvements
 
 - Move from SQLite to PostgreSQL for production (swap `provider` + `DATABASE_URL`
   in `schema.prisma`; no application code changes needed)
